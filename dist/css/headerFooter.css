@@ -202,23 +202,23 @@ header {
   border: 0;
   background-color: #ede1e3; }
 
-.topnav nav .navUl {
+.topnav nav .navOl {
   margin-left: 245px;
   height: 60px;
   float: left; }
 
-.topnav nav .navUl li {
+.topnav nav .navOl li {
   float: left;
   height: 60px;
   line-height: 60px; }
 
-.topnav nav .navUl li a {
+.topnav nav .navOl li a {
   color: #36343f;
   height: 60px;
   display: inline-block;
   padding: 0px 15px; }
 
-.topnav nav .navUl .active {
+.topnav nav .navOl .active {
   color: red;
   border-bottom: 3px red solid; }
 
@@ -231,21 +231,21 @@ header {
   text-align: center;
   position: relative; }
 
-.topnav div #navdUl {
+.topnav div .navdUl {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
   margin: 30px auto; }
 
-.topnav div #navdUl > li {
+.topnav div .navdUl > li {
   float: left;
   margin: 0px 30px 0px 30px; }
 
-.topnav div #navdUl > li > img {
+.topnav div .navdUl > li > img {
   width: 150px;
   height: 100px; }
 
-.topnav div #navdUl > li > p {
+.topnav div .navdUl > li > p {
   font-size: 10px;
   margin-top: 8px;
   width: 150px;
@@ -253,7 +253,7 @@ header {
   overflow: hidden;
   text-overflow: ellipsis; }
 
-.topnav div #navdUl > li > i {
+.topnav div .navdUl > li > i {
   font-style: normal;
   font-size: 12px;
   color: red; }
@@ -261,7 +261,6 @@ header {
 .scrollBg {
   width: 100%;
   height: 490px;
-  background: red;
   overflow: hidden; }
 
 .scroll {
@@ -318,7 +317,7 @@ div.btnNext {
 .scroll > ul.uIndex li.bg {
   background: #e42012; }
 
-#tabUl {
+#tabOl {
   width: 180px;
   height: 490px;
   background-color: rgba(87, 73, 89, 0.6);
@@ -330,40 +329,37 @@ div.btnNext {
   left: 30px;
   padding-top: 40px; }
 
-#tabUl > li {
+#tabOl > li {
   width: 180px;
   height: 60px;
   line-height: 67px;
   padding-left: 30px;
   cursor: pointer;
-  font-size: 14px; }
+  font-size: 14px;
+  position: relative;
+  padding-right: 50px; }
 
-#tabUl > li span {
+#tabOl > li span {
   display: inline-block;
-  font-size: 10px;
-  font-weight: 600;
   position: absolute;
-  right: 18px; }
-
-.leftList > div {
-  width: 760px;
-  height: 490px;
-  background: #fff;
-  position: absolute;
-  top: 100px;
-  left: 210px;
-  border-top: 1px solid #ccc; }
+  right: 30px; }
 
 .scLeftactive {
   background-color: #fff;
   color: red; }
 
 /*轮播图左侧导航栏内容*/
-.leftList .scLeftCon .slConUl {
+.slConUl {
   width: 760px;
-  height: 550px; }
+  height: 490px;
+  background: #fff;
+  position: absolute;
+  top: 100px;
+  left: 210px;
+  border-top: 1px solid #ccc;
+  display: none; }
 
-.leftList .scLeftCon .slConUl > li {
+.leftList .slConUl > li {
   float: left;
   width: 300px;
   height: 100px;
@@ -371,21 +367,21 @@ div.btnNext {
   margin-left: 50px;
   position: relative; }
 
-.leftList .scLeftCon .slConUl > li > img {
+.leftList .slConUl > li > img {
   width: 120px;
   height: 110px;
   position: absolute;
   top: -10px;
   left: 10px; }
 
-.leftList .scLeftCon .slConUl > li > p {
+.leftList .slConUl > li > p {
   position: absolute;
   left: 150px;
   top: 13px;
   font-size: 12px;
   color: #555; }
 
-.leftList .scLeftCon .slConUl > li > a {
+.leftList .slConUl > li > a {
   display: inline-block;
   width: 98px;
   height: 28px;

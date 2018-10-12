@@ -3,6 +3,7 @@ define(['jquery'],function($){
 		var showIndex = 0; //用于记录下标
 		var timer; //定时器
 		$(function() {
+			//轮播图动画
 			$("ul.uItems li").not(":eq(0)").css("display", "none");
 			startTimer();
 			//鼠标悬浮时
@@ -27,151 +28,79 @@ define(['jquery'],function($){
 				showImg();
 				startTimer();
 			});
-			//轮播图图片
-			$.ajax({
-				url:'data/scrollImg.json',
-				success:function(data){
-					for(var i= 0; i< data.length; i++){
-						$(`<li><img src="${data[i].src}"/></li>`).appendTo('.uItems')
-					}
-					
-				}
-			})
-			//左侧菜单栏子菜单显示/*<span>&#xe662;</span>*/
-			var oBtnLis = $('.leftList').find('#tabUl').find('li');
-			var oBtnDivs = $('.leftList').find('div');
-			oBtnLis.mouseenter(function(){
-				oBtnLis.attr('class','');
-				oBtnDivs.css('display','none');
-				$(this).attr('class','scLeftactive');
-				$('.leftList').find('div').eq($(this).index()).css('display','block');
-				oBtnDivs.eq($(this).index()).mouseenter(function(){
-					oBtnLis.eq($(this).index() -1).attr('class','scLeftactive');
-					$(this).css('display','block');
-				});
-				oBtnDivs.mouseleave(function(){
-					oBtnLis.eq($(this).index() -1).attr('class','');
-					$(this).css('display','none');
-				});
-			})
-			oBtnLis.mouseleave(function(ev){
-				oBtnLis.eq($(this).index()).removeClass('scLeftactive');
-				oBtnDivs.eq($(this).index()).css('display','none');
-			})
 			$.ajax({
 				url:'data/indextop.json',
 				success:function(data){
-					var scroll = data.scroll;
-
-					for(var i = 0 ; i < scroll.length;i++){
-						$(`<li>${scroll[i][0].listname}<span>&#xe662;</span></li>
-							`).appendTo('.leftList')
-						for(var j = 1 ; j < scroll[i].length;j++){
-							$(`<div class='scLeftCon'>
-								<ul class="slConUl"><li>
-							<img src="${scroll[i][j].src}" alt="tva">
-							<p>${scroll[i][j].title}</p>
-							<a href="#">${scroll[i][j].buy}</a>
-						</li></ul>
-							</div>`).appendTo('.leftList');
+					//轮播图图片
+					var scrollM = data.scrollImg;
+					for(var i = 0; i< scrollM.length; i++){
+						$(`<li><img src="${scrollM[i].src}"/></li>`).appendTo('.uItems');
+					}
+					
+					//轮播图左侧导航栏
+					var leftdata = data.scroll;
+					for(var i = 0 ; i < leftdata.length;i++){
+						$(`<li>${leftdata[i].listname}<span>></span></li>
+						    `).appendTo('#tabOl');
+					}
+					for(var k = 0 ; k < leftdata.length ; k++){
+						$(`<ul class="slConUl"}></ul>`).appendTo('.leftList');
+						var left = leftdata[k].leftUl;
+						for(var j = 0 ; j < left.length;j++){
+							$(`<li>
+							<img src="${left[j].src}" alt="img">
+							<p>${left[j].title}</p>
+							<a href="#">${left[j].buy}</a>
+							</li>
+							`).appendTo($('.slConUl').eq(k));
 						}
 					}
+					//轮播图左边动画部分
+					var oLis = $('#tabOl').find('li');
+					var oUls = $('.leftList').find('ul');
+					$('.leftList').on('mouseenter','li',function(){
+						oUls.css('display','none').eq($(this).index()).css('display','block');
+						oLis.removeClass('scLeftactive').eq($(this).index()).addClass('scLeftactive');
+					})
+					$('.leftList').on('mouseleave',function(){
+						oUls.css('display','none');
+						oLis.removeClass('scLeftactive')
+					})
+					//顶部导航栏
+					var topdata = data.header;
+					//导航头
+					for(var i = 0 ; i < topdata.length;i++){
+						$(`<li><a href="#">${topdata[i].topnav}</a></li>`)
+						.appendTo('.navOl');
+					}
+					//导航内容
+					for(var k = 0 ; k < topdata.length ; k++){
+						$(`<div id="navBox1"><ul class='navdUl'></ul></div>`).appendTo('.topnav');
+						var topConM = topdata[k].topCon;
+						for(var j = 0 ; j < topConM.length ;j++){
+							$(`<li>
+							<img src="${topConM[j].img}" alt="">
+							<p>"${topConM[j].title}"</p>
+							<i>"${topConM[j].price}"</i>
+							</li>`).appendTo($('.navdUl').eq(k));
+						}
+					}
+					//头部导航内容显示的动画
+					var topLis = $('.navOl').find('li');
+					var topDivs = $('.topnav').find('div');
+					$('.topnav').on('mouseenter','li',function(){
+						topDivs.css('display','none').eq($(this).index()).css('display','block');
+						topLis.find('a').removeClass('active').eq($(this).index()).addClass('active');
+					})
+					$('.topnav').on('mouseleave',function(){
+						topDivs.css('display','none');
+						topLis.removeClass('active')
+					})
 				},
 				error:function(msg){
 					console.log(msg);
 				}
 			})
-			/*//轮播左侧导航内容1--4kTV
-			$.ajax({
-				url:'data/scrLeftCon4KTV.json',
-				success:function(data){
-					for(var i = 0; i< data.length;i++){
-						$(`<li>
-							<img src="${data[i].src}" alt="tva">
-							<p>${data[i].title}</p>
-							<a href="#">${data[i].buy}</a>
-						</li>`).appendTo('.Su1');
-					}
-				}
-			})
-			//轮播左侧导航内容2--曲面TV
-			$.ajax({
-				url:'data/scrLeftConCurvedtv.json',
-				success:function(data){
-					for(var i = 0; i< data.length;i++){
-						$(`<li>
-							<img src="${data[i].src}" alt="tva">
-							<p>${data[i].title}</p>
-							<a href="#">${data[i].buy}</a>
-						</li>`).appendTo('.Su2');
-					}
-				}
-			})
-			//轮播左侧导航内容3--空调推荐
-			$.ajax({
-				url:'data/scrLeftConAir.json',
-				success:function(data){
-					for(var i = 0; i< data.length;i++){
-						$(`<li>
-							<img src="${data[i].src}" alt="tva">
-							<p>${data[i].title}</p>
-							<a href="#">${data[i].buy}</a>
-						</li>`).appendTo('.Su3');
-						}
-					}
-			})
-			//轮播左侧导航内容4--冰洗爆款
-			$.ajax({
-				url:'data/scrLeftConRefriger.json',
-				success:function(data){
-					for(var i = 0; i< data.length;i++){
-						$(`<li>
-							<img src="${data[i].src}" alt="tva">
-							<p>${data[i].title}</p>
-							<a href="#">${data[i].buy}</a>
-						</li>`).appendTo('.Su4');
-						}
-					}
-			})
-			//轮播左侧导航内容3--厨卫电器
-			$.ajax({
-				url:'data/scrLeftConKitchen.json',
-				success:function(data){
-					for(var i = 0; i< data.length;i++){
-						$(`<li>
-							<img src="${data[i].src}" alt="tva">
-							<p>${data[i].title}</p>
-							<a href="#">${data[i].buy}</a>
-						</li>`).appendTo('.Su5');
-						}
-					}
-			})
-			//轮播左侧导航内容3--生活电器
-			$.ajax({
-				url:'data/scrLeftConLife.json',
-				success:function(data){
-					for(var i = 0; i< data.length;i++){
-						$(`<li>
-							<img src="${data[i].src}" alt="tva">
-							<p>${data[i].title}</p>
-							<a href="#">${data[i].buy}</a>
-						</li>`).appendTo('.Su6');
-						}
-					}
-			})
-			//轮播左侧导航内容3--手机及配件
-			$.ajax({
-				url:'data/scrLeftConCellphone.json',
-				success:function(data){
-					for(var i = 0; i< data.length;i++){
-						$(`<li>
-							<img src="${data[i].src}" alt="tva">
-							<p>${data[i].title}</p>
-							<a href="#">${data[i].buy}</a>
-						</li>`).appendTo('.Su7');
-						}
-					}
-			})*/
 		});
 		function startTimer(){
 			timer = setInterval(function() {
