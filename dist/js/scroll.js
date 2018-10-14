@@ -163,6 +163,19 @@ define(['jquery'],function($){
 						<a href="#" class='NewsA'>查看详情  >></a>
 					</li>`).appendTo('.newsUl');
 					}
+					//footer帮助中心，数据加载
+					var footerData = data.footer;
+					for(var i = 0;i< footerData.length; i++){
+						$(`<dl class='footDl'>
+							<dd>${footerData[i].fooDt}</dd>
+							</dl>`)
+						.appendTo($('.connectLeft'));
+						var fooDdMain = footerData[i].fooDd;
+						for(var j = 0 ; j < fooDdMain.length ; j++){
+							$(`<dt><a href="#">${fooDdMain[j]}</a></dt>`)
+							.appendTo($('.footDl')[i]);
+						}
+					}
 				},
 				error:function(msg){
 					console.log(msg);

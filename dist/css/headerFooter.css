@@ -614,8 +614,149 @@ div.btnNext {
   width: 100%;
   background-color: #f0f0f0; }
 
-/* 底部 -- copyright版权 */
+.connect .connectUl {
+  width: 1240px;
+  height: 130px;
+  margin: 0px auto;
+  border-bottom: 1px solid #e0e0e0; }
+
+.connect .connectUl .connectULi {
+  width: 140px;
+  display: inline-block;
+  margin-top: 42px;
+  float: left;
+  font-size: 14px;
+  height: 34px;
+  line-height: 34px; }
+
+.connect .connectUl .connectULi:nth-child(2), .connect .connectUl .connectULi:nth-child(3), .connect .connectUl .connectULi:nth-child(4) {
+  margin-left: 226px; }
+
+.connect .connectUl .connectULi > span {
+  font-size: 34px;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: 5px; }
+
+.connect .connectLeft {
+  margin-left: 10px;
+  width: 852px;
+  height: 266px;
+  float: left; }
+
+.connect .connectLeft > dl {
+  margin: 37px 110px 20px 0px;
+  float: left; }
+
+.connect .connectLeft > dl > dd {
+  font-size: 13px;
+  font-weight: 700;
+  color: #313236;
+  line-height: 24px; }
+
+.connect .connectLeft > dl > dt {
+  font-size: 11px;
+  color: #b2a4c7;
+  line-height: 26px; }
+
+.connect .connectLeft > dl > dt > a:hover {
+  text-decoration: underline;
+  color: #666; }
+
+.connect .connectRight {
+  width: 390px;
+  height: 266px;
+  float: right;
+  margin-right: 10px; }
+
+.connect .connectRight > aside {
+  width: 204px;
+  float: left; }
+
+.connect .connectRight aside > p {
+  margin-top: 36px;
+  color: #373332;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 800; }
+
+.connect .connectRight aside > img {
+  width: 120px;
+  height: 120px;
+  margin-top: 14px; }
+
+.connect .connectRight > article {
+  width: 186px;
+  float: left; }
+
+.connect .connectRight > article > p {
+  margin-top: 36px;
+  font-size: 15px;
+  color: #f90000;
+  font-weight: 900; }
+
+.connect .connectRight > article > i {
+  color: #bbc6da;
+  font-size: 11px; }
+
+.connect .connectRight > article > a {
+  display: inline-block;
+  width: 160px;
+  height: 36px;
+  border: 2px solid #f90000;
+  margin-top: 20px;
+  line-height: 36px;
+  font-size: 9px;
+  color: #f90000;
+  text-align: center; }
+
+.connect .connectRight > article > a > span {
+  font-size: 19px;
+  font-weight: 800;
+  margin-right: 10px;
+  position: relative;
+  top: 2px; }
+
+/* 底部 -- copyright版权*/
 footer {
   width: 100%;
   height: 147px;
-  background-color: #e3e3e3; }
+  background-color: #e3e3e3;
+  overflow: hidden;
+  position: relative; }
+
+footer .fooUl {
+  display: block;
+  margin-top: 28px;
+  margin-left: 10px; }
+
+footer .fooUl > li {
+  float: left;
+  font-size: 11px;
+  color: #6e719e; }
+
+footer > p {
+  margin-left: 10px;
+  margin-top: 10px;
+  display: block;
+  font-size: 12px;
+  color: #b4a193; }
+
+footer > .police {
+  margin-left: 540px; }
+
+footer > .police > img {
+  width: 88px;
+  height: 32px; }
+
+footer > .language {
+  position: absolute;
+  top: 45px;
+  right: 36px; }
+
+footer > .language a {
+  font-size: 11px;
+  color: #5f799e; }
+  footer > .language a:hover {
+    color: #f90000; }
