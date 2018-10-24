@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品详情页面</title>
+	<link rel="stylesheet" href="css/headerFooter.min.css">
+	<link rel="stylesheet" href="css/goods.min.css">
+	<link rel="stylesheet" href="./iconfont/iconfont.css">
+	<script src = 'js/require.js' async="true" defer data-main = 'js/maingoods'></script>
+</head>
+<body>
+	<div class="topHea">
+		<header>
+			<ul class= "heaUl">
+				<li id="li1"><a href="index.html">English</a></li>
+				<li><a href="index.html">TCL新闻</a></li>
+				<li><a href="index.html">企业采购</a></li>
+				<li><a href="index.html">经销商之家</a></li>
+				<li><a href="index.html">雷鸟</a></li>
+				<li><a href="index.html">用户体验中心</a></li>
+				<li><a href="index.html">铁粉社区</a></li>
+			</ul>
+			<ul class="heaUlRight">
+				<li id= 'wechat'>
+					<a href="#" id = 'wxMall'>微信商城</a>
+					<div id = 'weichatCon'>
+						<img src="images/index//headerNav/wechat.jpg" alt="">
+						<p class='weichatp'>关注公众号</p>
+						<p class='weichatp'>一键下单购买</p>
+					</div>
+					<span>|</span>
+				</li>
+				<li>
+					<a href="shopCar.html" >购物车(<span id = 'shopCarNum'>0</span>)</a>
+					<span>|</span>
+				</li>
+				<li>
+					<a href="register.html">注册</a>
+					<span>|</span>
+				</li>
+				<li><a href="login.html">登录</a></li>
+			</ul>
+	    </header>
+	</div>
+	<div class="topnav">
+		<nav>
+			<p class="index"><a href="index.html">首页</a></p>
+	    	<ol class="navOl"> 
+	    	</ol>
+	    	<ul class='navUlRight iconfont'>
+	    		<span>&#xe63a;</span>
+	    		<li><a href="#" id="server">服务</a></li>
+	    		<li><a href="#">视频教程</a></li>
+	    		<li><a href="#">XESS门店</a></li>
+	    		<li><a href="#">积分兑换</a></li>
+	    		<p class="navSearch">
+	    			<input type="text" placeholder="电视">
+	    			<button class="iconfont">&#xe636;</button>
+	    		</p>
+	    	</ul>
+	    </nav>
+	</div>
+	<!-- 商品详情部分 -->
+	<section>
+		<div class='nava'>
+			<div class = 'navaCon'>
+				<p><i>TCL官网</i> > <i>电视</i> >
+				<i>55A880U 55英寸全面屏超纤薄电视</i> </p>
+			</div>
+			<div class='fixed'>
+				<div class='fixedCon'>
+					<p class='words'>
+						<i>55A880U </i>
+						<span class='price'>2899.00元</span>
+						<span class='RMB'>RMB:3499.00元</span>
+					</p>
+					<div class = 'fixedRight'>
+						<span>手机购买</span>
+						<img src="images/goods/code.png" alt="二维码" class="showtop">
+						<a href="#" class = 'fBuy'>立即购买</a>
+						<div class='Qcode'>
+							<img src="images/goods/top1.jpg" alt="" class='icon'>
+							<img src="images/goods/code1.png" alt="" class = 'code1'>
+							<p>关注公众号</p>
+							<p>一键下单购买</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class='goodsCon'>
+		<div class= 'goodsmain'>
+			<div class='goodsmainLeft'>
+				<div class = 'bigDetal'>
+					<div class = "slider"></div>
+					<div class = "maximg">
+					</div>
+				</div>
+				<div class="maxImg">
+				</div>
+				<div class = 'slide'></div>
+				<div class='smallDetal'>
+				</div>
+			</div>
+			<div class='goodsmainRight'>
+				<div class='buycar'>
+					<dl class='iconfont'>
+						<dd class='num'>0</dd>
+						<dt class='add'>&#xe648;</dt>
+						<dt class='reduce'>&#xe637;</dt>
+					</dl>
+					<a href='' class='Rbuy'>立即购买</a>
+					<span href="" class='addCar'>加入购物车</span>
+				</div>
+				<div class='address iconfont'>
+					<span>配送到:</span>
+					<p id="place">请选择地区</p><i>&#xe637;</i>
+					<div class='buyAddress'>
+						<div id="demo2" class="citys">
+							<p>
+								<select name="province"></select>
+								<select name="city"></select>
+								<select name="area"></select>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+	<div class='imgCon'>
+		<div class='imgmain'>
+		</div>
+		<div class='navigate'>
+			<ul class=navigateUl>
+				<li>详情介绍</li>
+				<li>规格参数</li>
+				<li>服务政策</li>
+				<li>常见问题</li>
+				<li>晒单评价</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 底部 -->
+	<!-- 联系我们 -->
+	<div class="connect iconfont">
+		<ul class='connectUl'>
+			<li class = 'connectULi'><span>&#xe634;</span>官方正品</li>
+			<li class = 'connectULi'><span>&#xe638;</span>全国联保</li>
+			<li class = 'connectULi'><span>&#xe6b4;</span>全场包邮</li>
+			<li class = 'connectULi'><span>&#xe68b;</span>7天无理由退货</li>
+		</ul>
+		<div class='connectLeft'></div>
+		<div class='connectRight'>
+			<aside>
+				<p>TCL官网商城</p>
+				<img src="images/bottom/wechat.jpg" alt="">
+			</aside>
+			<article class='iconfont'>
+				<p>4008-123456</p>
+				<i>(24小时在线，只收市话费)</i>
+				<a href=""><span>&#xe607;</span>24小时客服在线</a>
+			</article>
+		</div>
+	</div>
+	<footer class='iconfont'>
+		<ul class='iconfont fooUl'>
+			<li><a href="#">关于TCL</a><span>&#xe63a;</span></li>
+			<li><a href="#">投资者关系</a><span>&#xe63a;</span></li>
+			<li><a href="#">社会责任</a><span>&#xe63a;</span></li>
+			<li><a href="#">新闻中心</a><span>&#xe63a;</span></li>
+			<li><a href="#">人才招聘</a><span>&#xe63a;</span></li>
+			<li><a href="#">成员网站</a></li>
+		</ul><br>
+		<p>©2010-2018 TCL CORPORATION All Rights Reserved. TCL集团股份有限公司版权所有 粤ICP备05040863号使用条款<span>&#xe63a;</span>法律声明<span>&#xe63a;</span>隐私保护</p>
+		<p><img src="images/bottom/beian.png" alt="">粤网公安备案44133002100088号</p>
+		<div class='police'>
+			<img src="images/bottom/credibility.png" alt="">
+			<img src="images/bottom/electrical.png" alt="">
+		</div>
+		<div class='language iconfont'><a href="">中文简体</a><span>&#xe63a;</span><a href="">English</a></div>
+	</footer>
+	<!-- 左侧固定 -->
+	<div class='goTop iconfont'>
+		<a href="#" class='goTopA'><div class = 'item'>&#xe607;</div></a>
+		<a href="#" class='goTopA' id = 'goTopb'>&#xe648;</a>
+	</div>
+</body>
+</html>

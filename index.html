@@ -3,12 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>TCL电器商城</title>
-	<link rel="stylesheet" href="css/index.min.css">
 	<link rel="stylesheet" href="css/headerFooter.min.css">
 	<link rel="stylesheet" href="./iconfont/iconfont.css">
+	<link rel="stylesheet" href="css/goods.min.css">
 	<script src = 'js/require.js' async="true" defer data-main = 'js/main' ></script>
 </head>
 <body>
+	
 	<div class="topHea">
 		<header>
 			<ul class= "heaUl">
@@ -31,22 +32,21 @@
 					<span>|</span>
 				</li>
 				<li>
-					<a href="#">购物车(0)</a>
+					<a href="shopCar.html" >购物车(<span id = 'shopCarNum'>0</span>)</a>
 					<span>|</span>
 				</li>
 				<li>
-					<a href="#">注册</a>
+					<a href="register.html">注册</a>
 					<span>|</span>
 				</li>
-				<li><a href="#">登录</a></li>
+				<li><a href="login.html">登录</a></li>
 			</ul>
 	    </header>
 	</div>
 	<div class="topnav">
 		<nav>
-			<p class="index"><a href="#">首页</a></p>
-	    	<ol class="navOl"> 
-	    	</ol>
+			<p class="index"><a href="index.html">首页</a></p>
+	    	<ol class="navOl"></ol>
 	    	<ul class='navUlRight iconfont'>
 	    		<span>&#xe63a;</span>
 	    		<li><a href="#" id="server">服务</a></li>
@@ -93,7 +93,7 @@
 	<div class="connect iconfont">
 		<ul class='connectUl'>
 			<li class = 'connectULi'><span>&#xe634;</span>官方正品</li>
-			<li class = 'connectULi'><span>&#xe637;</span>全国联保</li>
+			<li class = 'connectULi'><span>&#xe638;</span>全国联保</li>
 			<li class = 'connectULi'><span>&#xe6b4;</span>全场包邮</li>
 			<li class = 'connectULi'><span>&#xe68b;</span>7天无理由退货</li>
 		</ul>
@@ -127,5 +127,10 @@
 		</div>
 		<div class='language iconfont'><a href="">中文简体</a><span>&#xe63a;</span><a href="">English</a></div>
 	</footer>
+	<!-- 左侧固定 -->
+	<div class='goTop iconfont'>
+		<a href="#" class='goTopA'><div class = 'item'>&#xe607;</div></a>
+		<a href="#" class='goTopA' id = 'goTopb'>&#xe648;</a>
+	</div>
 </body>
 </html>

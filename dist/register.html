@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>register</title>
+	<link rel="stylesheet" href="./iconfont/iconfont.css">
+	<script src = 'js/require.js' async="true" defer data-main = 'js/main' ></script>
+	<link rel="stylesheet" href="css/registerLogin.min.css">
+	<link rel="stylesheet" href="css/register.min.css">
+</head>
+<body>
+	<header>
+		<div class='top'>
+			<img src="images/login/logo.jpg" alt="">
+			<p>TCL账号登录</p>
+		</div>
+	</header>
+	<section>
+		<div class='main iconfont'>
+			<p class='rep'>注册TCL账号</p>
+			<p class='phone'>
+				<span>&#xe639;</span>
+				<input type="text" placeholder="手机号码" id = 'phoneNumber'>
+			</p>
+			<div class= 'verify' id = 'phoneCall'></div>
+			<!-- 把短信验证改为输入密码 -->
+			<p class='message'>
+				<span>&#xe73e;</span>
+				<input type="text" placeholder="请输入密码" id= 'psd'>
+			</p>
+			<div class= 'verify' id = 'psdCall'></div>
+			<p class='photo'>
+				<span>&#xe641;</span>
+				<input type="text" placeholder="图片验证码" id = 'testNum'>
+				<i id = 'code'>s4Gfer</i>
+			</p>
+			<div class= 'verify' id = 'testImgcall'></div>
+			<p class='check'>
+				<input type="checkbox" class="checkbtn" >
+				<i>已阅读并同意用户服务条款和隐私政策</i>
+			</p>
+			<span id = 'total'></span>
+			<input type="submit" value = '注册' class='submit' id = 'register'>
+			<a href="login.html" class = 'enter'>已有账号，直接登录</a>
+			<a href="login.html" class = 'tirdEnter'>推荐第三方登录</a>
+		</div>
+	</section>
+	<footer>
+		<div class='bottom'>
+			<ul class='iconfont bottomUl'>
+				<li><a href="#">关于TCL</a><span>&#xe63a;</span></li>
+				<li><a href="#">社会责任</a><span>&#xe63a;</span></li>
+				<li><a href="#">投资者关系</a><span>&#xe63a;</span></li>
+				<li><a href="#">新闻中心</a><span>&#xe63a;</span></li>
+				<li><a href="#">经销商之家</a></li>
+			</ul>
+			<p class='copyRight'>©2010-2016 TCL CORPORATION All Rights Reserved. <span>使用条款</span>TCL集团股份有限公司版权所有 粤ICP备05040863号</p>
+		</div>
+	</footer>
+</body>
+</html>

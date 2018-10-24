@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TCL电器商城</title>
+	<link rel="stylesheet" href="css/headerFooter.min.css">
+	<link rel="stylesheet" href="./iconfont/iconfont.css">
+	<link rel="stylesheet" href="css/goods.min.css">
+	<link rel="stylesheet" href="css/more.min.css">
+	<script src = 'js/require.js' async="true" defer data-main = 'js/mainmore' ></script>
+</head>
+<body>
+	<div class="topHea">
+		<header>
+			<ul class= "heaUl">
+				<li id="li1"><a href="index.html">English</a></li>
+				<li><a href="index.html">TCL新闻</a></li>
+				<li><a href="index.html">企业采购</a></li>
+				<li><a href="index.html">经销商之家</a></li>
+				<li><a href="index.html">雷鸟</a></li>
+				<li><a href="index.html">用户体验中心</a></li>
+				<li><a href="index.html">铁粉社区</a></li>
+			</ul>
+			<ul class="heaUlRight">
+				<li id= 'wechat'>
+					<a href="#" id = 'wxMall'>微信商城</a>
+					<div id = 'weichatCon'>
+						<img src="images/index//headerNav/wechat.jpg" alt="">
+						<p class='weichatp'>关注公众号</p>
+						<p class='weichatp'>一键下单购买</p>
+					</div>
+					<span>|</span>
+				</li>
+				<li>
+					<a href="shopCar.html">购物车(<span id = 'shopCarNum'>0</span>)</a>
+					<span>|</span>
+				</li>
+				<li>
+					<a href="register.html">注册</a>
+					<span>|</span>
+				</li>
+				<li><a href="login.html">登录</a></li>
+			</ul>
+	    </header>
+	</div>
+	<div class="topnav">
+		<nav>
+			<p class="index"><a href="index.html">首页</a></p>
+	    	<ol class="navOl"> 
+	    	</ol>
+	    	<ul class='navUlRight iconfont'>
+	    		<span>&#xe63a;</span>
+	    		<li><a href="#" id="server">服务</a></li>
+	    		<li><a href="#">视频教程</a></li>
+	    		<li><a href="#">XESS门店</a></li>
+	    		<li><a href="#">积分兑换</a></li>
+	    		<p class="navSearch">
+	    			<input type="text" placeholder="电视">
+	    			<button class="iconfont">&#xe636;</button>
+	    		</p>
+	    	</ul>
+	    </nav>
+	</div>
+	<!-- 轮播图部分 -->
+	<div class='scrollBg'>
+		<div class="scroll iconfont">
+			<ul class="uItems"></ul>
+			<!-- 上一个 -->
+			<div class="btn btnPrev">&#xe67f;</div>
+			<!-- 下一个 -->
+			<div class="btn btnNext">&#xe662;</div> 
+			<ul class="uIndex">
+				<li class="bg"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 主要商品 -->
+	<div class='detaCon'>
+		<!-- 商品检索 -->
+		<div class='search'>
+			条件检索模块--
+		</div>
+		<p class = 'order'>综合排序</p>
+		<!-- 商品罗列 -->
+		<ul class='allgos'></ul>
+		<div class='ball'><img src="images/shopcar/shopping.png" alt=""></div>
+	</div>
+	<!-- 底部 -->
+	<!-- 联系我们 -->
+	<div class="connect iconfont">
+		<ul class='connectUl'>
+			<li class = 'connectULi'><span>&#xe634;</span>官方正品</li>
+			<li class = 'connectULi'><span>&#xe638;</span>全国联保</li>
+			<li class = 'connectULi'><span>&#xe6b4;</span>全场包邮</li>
+			<li class = 'connectULi'><span>&#xe68b;</span>7天无理由退货</li>
+		</ul>
+		<div class='connectLeft'></div>
+		<div class='connectRight'>
+			<aside>
+				<p>TCL官网商城</p>
+				<img src="images/bottom/wechat.jpg" alt="">
+			</aside>
+			<article class='iconfont'>
+				<p>4008-123456</p>
+				<i>(24小时在线，只收市话费)</i>
+				<a href=""><span>&#xe607;</span>24小时客服在线</a>
+			</article>
+		</div>
+	</div>
+	<footer class='iconfont'>
+		<ul class='iconfont fooUl'>
+			<li><a href="#">关于TCL</a><span>&#xe63a;</span></li>
+			<li><a href="#">投资者关系</a><span>&#xe63a;</span></li>
+			<li><a href="#">社会责任</a><span>&#xe63a;</span></li>
+			<li><a href="#">新闻中心</a><span>&#xe63a;</span></li>
+			<li><a href="#">人才招聘</a><span>&#xe63a;</span></li>
+			<li><a href="#">成员网站</a></li>
+		</ul><br>
+		<p>©2010-2018 TCL CORPORATION All Rights Reserved. TCL集团股份有限公司版权所有 粤ICP备05040863号使用条款<span>&#xe63a;</span>法律声明<span>&#xe63a;</span>隐私保护</p>
+		<p><img src="images/bottom/beian.png" alt="">粤网公安备案44133002100088号</p>
+		<div class='police'>
+			<img src="images/bottom/credibility.png" alt="">
+			<img src="images/bottom/electrical.png" alt="">
+		</div>
+		<div class='language iconfont'><a href="">中文简体</a><span>&#xe63a;</span><a href="">English</a></div>
+	</footer>
+	<!-- 左侧固定 -->
+	<div class='goTop iconfont'>
+		<a href="#" class='goTopA'><div class = 'item'>&#xe607;</div></a>
+		<a href="#" class='goTopA' id = 'goTopb'>&#xe648;</a>
+	</div>
+</body>
+</html>

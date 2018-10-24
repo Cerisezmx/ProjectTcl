@@ -1,0 +1,296 @@
+@charset "UTF-8";
+/*公共样式--开始*/
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+  margin: 0;
+  padding: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html, body {
+  min-height: 100%; }
+
+i {
+  font-style: normal; }
+
+body {
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+  color: #333; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+ul, ol {
+  list-style: none; }
+
+img {
+  border: none;
+  vertical-align: middle; }
+
+a {
+  text-decoration: none;
+  color: #232323; }
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed; }
+
+input, textarea {
+  outline: none;
+  border: none; }
+
+textarea {
+  resize: none;
+  overflow: auto; }
+
+.clearfix {
+  zoom: 1; }
+
+.clearfix:after {
+  content: ".";
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+  overflow: hidden; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.tl {
+  text-align: left; }
+
+.tc {
+  text-align: center; }
+
+.tr {
+  text-align: right; }
+
+.ellipse {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.inline {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+.cartitle {
+  width: 100%;
+  height: 70px;
+  background: url(../images/logo.jpg) no-repeat center left;
+  line-height: 70px; }
+  .cartitle p {
+    font-size: 16px;
+    color: #666;
+    margin-left: 85px; }
+
+.cartfom {
+  width: 100%;
+  height: 80px;
+  background: #e3e3e3; }
+  .cartfom .cartCon {
+    width: 1240px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    margin: 0 auto; }
+    .cartfom .cartCon .titlecart {
+      float: left;
+      font-size: 14px;
+      font-weight: 700;
+      color: #333;
+      text-align: center; }
+      .cartfom .cartCon .titlecart .checkAll {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        border: 1px solid #ccc;
+        background: #fff;
+        position: relative;
+        top: 5px;
+        margin-right: 23px;
+        cursor: pointer; }
+    .cartfom .cartCon .form_total {
+      float: left;
+      font-size: 14px;
+      font-weight: 700;
+      color: #333;
+      text-align: center; }
+    .cartfom .cartCon .pro-wid {
+      width: 610px; }
+    .cartfom .cartCon .pri-wid {
+      width: 100px; }
+    .cartfom .cartCon .num-wid {
+      width: 176px; }
+    .cartfom .cartCon .sub-wid {
+      width: 140px; }
+    .cartfom .cartCon .ope-wid {
+      width: 70px; }
+
+.commodity {
+  width: 100%; }
+  .commodity .cartlist {
+    width: 1240px;
+    margin: 0 auto;
+    margin-bottom: 160px; }
+    .commodity .cartlist .cart-good {
+      width: 1240px;
+      height: 215px;
+      border-bottom: 1px solid #ccc; }
+      .commodity .cartlist .cart-good dl {
+        height: 120px;
+        width: 1240px;
+        margin-top: 70px; }
+        .commodity .cartlist .cart-good dl dd {
+          display: inline-block;
+          height: 120px;
+          line-height: 120px;
+          float: left; }
+        .commodity .cartlist .cart-good dl .good1 {
+          width: 130px;
+          position: relative; }
+          .commodity .cartlist .cart-good dl .good1 span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+            background: #fff;
+            position: absolute;
+            top: 60px;
+            left: 10px;
+            cursor: pointer; }
+        .commodity .cartlist .cart-good dl .good2 {
+          width: 580px; }
+          .commodity .cartlist .cart-good dl .good2 img {
+            width: 120px;
+            height: 120px; }
+          .commodity .cartlist .cart-good dl .good2 p {
+            color: #666;
+            font-size: 15px;
+            margin-left: 53px;
+            display: inline-block; }
+        .commodity .cartlist .cart-good dl .good3 {
+          width: 100px;
+          color: #3e3e3e; }
+        .commodity .cartlist .cart-good dl .good4 {
+          width: 176px;
+          line-height: 120px;
+          text-align: center; }
+          .commodity .cartlist .cart-good dl .good4 span {
+            background-color: #e3e3e3;
+            cursor: pointer;
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            line-height: 32px; }
+          .commodity .cartlist .cart-good dl .good4 input {
+            width: 23px;
+            height: 32px;
+            display: inline-block;
+            padding-left: 8px;
+            color: #ff0000; }
+        .commodity .cartlist .cart-good dl .good5 {
+          width: 140px;
+          text-align: center; }
+          .commodity .cartlist .cart-good dl .good5 .now {
+            font-size: 14px;
+            margin-top: 50px;
+            margin-right: 10px;
+            color: #ff0000;
+            line-height: 24px; }
+        .commodity .cartlist .cart-good dl .good6 {
+          width: 70px;
+          color: #333; }
+          .commodity .cartlist .cart-good dl .good6 span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            cursor: pointer; }
+
+.account {
+  height: 120px;
+  width: 1240px;
+  border-bottom: 1px solid #ccc;
+  line-height: 120px; }
+
+.goon {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+  line-height: 28px;
+  display: inline-block;
+  float: left;
+  margin-top: 44px; }
+  .goon:hover {
+    color: #ff0000; }
+
+.choose {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 24px;
+  margin-left: 240px;
+  float: left;
+  margin-top: 44px; }
+
+.choose .goodsCount, .choose .chooseCount {
+  font-size: 14px;
+  color: #ff0000;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: 700; }
+
+.choose .rmbtotal {
+  margin-left: 40px; }
+
+.choose .rmbtotal .rmbt {
+  font-size: 22px;
+  color: #ff0000;
+  font-weight: 600;
+  margin-left: 30px; }
+
+.rightbuy {
+  display: inline-block;
+  width: 230px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #ff0000;
+  color: #fff;
+  float: right;
+  margin-top: 36px;
+  font-size: 16px; }
+
+.nogoods {
+  width: 1240px;
+  height: 465px;
+  text-align: center;
+  overflow: hidden;
+  background: url("../images/shopcar/shopping.png") 300px center no-repeat pink; }
+  .nogoods p {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 180px; }
+  .nogoods a {
+    display: inline-block;
+    width: 135px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #ff0000;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ff0000;
+    border-radius: 5px;
+    margin-top: 30px; }
+    .nogoods a:hover {
+      background: #ff0000;
+      color: #fff; }

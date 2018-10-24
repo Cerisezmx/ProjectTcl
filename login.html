@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<link rel="stylesheet" href="./iconfont/iconfont.css">
+	<script src = 'js/require.js' async="true" defer data-main = 'js/main' ></script>
+	<link rel="stylesheet" href="css/registerLogin.min.css">
+	<link rel="stylesheet" href="css/login.min.css">
+</head>
+<body>
+	<header>
+		<div class='top'>
+			<img src="images/login/logo.jpg" alt="">
+			<p>TCL账号登录</p>
+		</div>
+	</header>
+	<section>
+		<div class='main iconfont'>
+			<p class='rep' id = 'title'>推荐第三方登录 
+				<a href="#" class='wechat'><img src="images/register/weixin.png" alt=""></a>
+				<a href="#"><img src="images/register/qq.png" alt=""></a>
+				<a href="#"><img src="images/register/weibo.png" alt=""></a>
+			</p>
+			<p class='rep'>账号密码登录</p>
+			<p class='phone phone2'>
+				<span>&#xe639;</span>
+				<input type="text" placeholder="手机号/邮箱/用户名" id = 'Enterumber'>
+			</p>
+			<!-- 请输入手机号/邮箱/用户名 -->
+			<div class='verify numberE hei'></div>  
+			<p class='phone'>
+				<span>&#xe73e;</span>
+				<input type="text" placeholder="登录密码" id = 'EntPassword'>
+			</p>
+			<!-- 用户名或密码错误 -->
+			<div class='verify password hei' id = 'total'></div>
+			<input type="submit" value = '登录' id='loginsubmit'>
+			<a href="#" class = 'enter'>短信验证登录</a>
+			<a href="register.html" class = 'tirdEnter'>注册TCL账号</a>
+			<a href="#" class = 'tirdEnter'>找回密码</a>
+		</div>
+	</section>
+	<footer>
+		<div class='bottom'>
+			<ul class='iconfont bottomUl'>
+				<li><a href="#">关于TCL</a><span>&#xe63a;</span></li>
+				<li><a href="#">社会责任</a><span>&#xe63a;</span></li>
+				<li><a href="#">投资者关系</a><span>&#xe63a;</span></li>
+				<li><a href="#">新闻中心</a><span>&#xe63a;</span></li>
+				<li><a href="#">经销商之家</a></li>
+			</ul>
+			<p class='copyRight'>©2010-2016 TCL CORPORATION All Rights Reserved. <span>使用条款</span>TCL集团股份有限公司版权所有 粤ICP备05040863号</p>
+		</div>
+	</footer>
+</body>
+</html>

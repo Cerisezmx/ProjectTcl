@@ -1,11 +1,12 @@
-define(['jquery'],function($){
+define(['jquery','jquery-cookie'],function($){
 	function scroll(){
+		countNum();
 		var showIndex = 0; //用于记录下标
 		var timer; //定时器
 		$(function() {
 			//wechat动画部分
 			$('#wechat').on('mouseenter','#wxMall,#weichatCon',function(){
-				$("#weichatCon").stop(true).animate({height:180,},1000).css({display:'block'});
+				$("#weichatCon").stop(true).animate({height:180},1000).css({display:'block'});
 				return false;
 			})
 			$('#wechat').on('mouseleave','#wxMall,#weichatCon',function(){
@@ -58,7 +59,7 @@ define(['jquery'],function($){
 							$(`<li>
 							<img src="${left[j].src}" alt="img">
 							<p>${left[j].title}</p>
-							<a href="#">${left[j].buy}</a>
+							<a href="goods.html">${left[j].buy}</a>
 							</li>
 							`).appendTo($('.slConUl').eq(k));
 						}
@@ -78,7 +79,7 @@ define(['jquery'],function($){
 					var topdata = data.header;
 					//导航头
 					for(var i = 0 ; i < topdata.length;i++){
-						$(`<li><a href="#">${topdata[i].topnav}</a></li>`)
+						$(`<li><a href="more.html">${topdata[i].topnav}</a></li>`)
 						.appendTo($('.navOl'));
 					}
 					//导航内容
@@ -132,16 +133,39 @@ define(['jquery'],function($){
 						</a><ul class='MainAdUl'></ul>`).appendTo($('.MainAd')[i]);
 						//内层循环，加li
 						var mainConLi = mainCon[i].rightUl;
-						for(var j  = 0 ; j < mainConLi.length ; j++){
-							$(`<li class='limove'>
-								<a href="#">
-									<img src="${mainConLi[j].src}" alt="">
-									<p>${mainConLi[j].title}</p>
-									<i>${mainConLi[j].dice}</i>
-									<strong>${mainConLi[j].price}</strong>
+						for(let h = 0 ; h < mainConLi.length ; h++){
+							var node = $(`<li class='limove'>
+								<a href="more.html">
+									<img src="${mainConLi[h].src}" alt="">
+									<p>${mainConLi[h].title}</p>
+									<i>${mainConLi[h].dice}</i>
+									<strong>${mainConLi[h].price}</strong>
 								</a>
 							</li>`).appendTo($('.MainAdUl')[i]);
+							//判断状态，逐个添加售卖活动状态
+							if(mainConLi[h].status == "mood"){
+								$(`<img src="../images/status/mood.jpg" alt="" id = 'status'>`)
+								.appendTo(node);
+							}
+							if(mainConLi[h].status == "giftGiving"){
+								$(`<img src="../images/status/giftGiving.jpg" alt="" id = 'status'>`)
+								.appendTo(node);
+							}
+							if(mainConLi[h].status == "panicBuy"){
+								$(`<img src="../images/status/panicBuy.jpg" alt="" id = 'status'>`)
+								.appendTo(node);
+							}
+							if(mainConLi[h].status == "recomment"){
+								$(`<img src="../images/status/recomment.jpg" alt="" id = 'status'>`)
+								.appendTo(node);
+							}
+							if(mainConLi[h].status == "reducePrice"){
+								$(`<img src="../images/status/reducePrice.jpg" alt="" id = 'status'>`)
+								.appendTo(node);
+							}
+
 						}
+						
 					}
 					//商品详情区域li的动画
 					$('#main').on('mouseenter','.limove',function(){
@@ -176,6 +200,11 @@ define(['jquery'],function($){
 							.appendTo($('.footDl')[i]);
 						}
 					}
+					//回到顶部动画
+					$('#goTopb').click(function(){
+						$('html, body').animate({scrollTop:0},1000,function(){
+						});
+					})
 				},
 				error:function(msg){
 					console.log(msg);
@@ -197,6 +226,18 @@ define(['jquery'],function($){
 			//圆球显示
 			$("ul.uIndex li").removeClass("bg").eq(showIndex).addClass("bg");
 		}
+			//封装函数，计算购物车内的商品数量
+		function countNum(){
+			var sc_str = $.cookie('goods');//取购物车内的商品
+			if(sc_str){//如果有商品
+				var sc_arr = eval(sc_str);
+				var sum = 0;
+				for(var i = 0;i<sc_arr.length;i++){
+					sum += sc_arr[i].num;
+					$('#shopCarNum').html(sum);
+				}
+			}
+	}
 	}
 	return{
 		scroll:scroll

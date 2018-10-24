@@ -474,6 +474,11 @@ div.btnNext {
 #main .MainCon .MainAd .MainAdUl .limove{
 	position: relative;
 }
+#main .MainCon .MainAd .MainAdUl .limove #status{
+	position:relative;
+	top:-295px;
+	right:-125px;
+}
 // news 下面 新闻部分
 .news{
 	width:100%;
@@ -657,6 +662,11 @@ div.btnNext {
 	font-size:9px;
 	color:#f90000;
 	text-align:center;
+	&:hover{
+		color:#fff;
+		background:#ff0000;
+		text-decoration: underline;
+	}
 }
 .connect .connectRight>article>a>span{
 	font-size:19px;
@@ -664,6 +674,9 @@ div.btnNext {
 	margin-right:10px;
 	position:relative;
 	top:2px;
+	&:hover{
+		text-decoration: none;
+	}
 }
 /* 底部 -- copyright版权*/
 footer{
@@ -708,4 +721,31 @@ footer>.language a{
 	&:hover{
 		color:#f90000;
 	}
+}
+/* 左侧固定 --客服，回到顶部 */
+.goTop{
+	position: fixed;
+    right: 30px;
+    bottom: 150px;
+    z-index: 1100;
+    width: 46px;
+    height: 46px;
+    color:#cdd1ee;
+}
+.goTopA{
+	width:46px;
+	height:46px;
+	background-color:#fff;
+	display:inline-block;
+	border:1px solid #ccc;
+	cursor:pointer;
+	line-height:46px;
+	transition:all .2s;
+	position:relative;
+	font-size:22px;
+	text-align:center;
+	color:#979797;
+	overflow: hidden;
+	display:block;
+	overflow: hidden;
 }

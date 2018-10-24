@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/*公共样式--开始*/
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+  margin: 0;
+  padding: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html, body {
+  min-height: 100%; }
+
+i {
+  font-style: normal; }
+
+body {
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+  color: #333; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+ul, ol {
+  list-style: none; }
+
+img {
+  border: none;
+  vertical-align: middle; }
+
+a {
+  text-decoration: none;
+  color: #232323; }
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed; }
+
+input, textarea {
+  outline: none;
+  border: none; }
+
+textarea {
+  resize: none;
+  overflow: auto; }
+
+.clearfix {
+  zoom: 1; }
+
+.clearfix:after {
+  content: ".";
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+  overflow: hidden; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.tl {
+  text-align: left; }
+
+.tc {
+  text-align: center; }
+
+.tr {
+  text-align: right; }
+
+.ellipse {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.inline {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+section .main {
+  border: 1px solid #ccc; }
+
+section .main > .rep {
+  margin-top: 30px;
+  color: #33336c;
+  margin-left: 40px;
+  font-size: 18px; }
+
+section .main .verify {
+  height: 20px;
+  width: 300px;
+  margin-left: 50px;
+  color: #ff0000;
+  font-size: 11px;
+  margin-top: 4px; }
+
+section .main .phone, section .main .photo, section .main .message {
+  height: 40px;
+  width: 280px;
+  border: 2px solid #ccc;
+  margin-left: 40px;
+  margin-top: 5px;
+  line-height: 40px; }
+
+section .main .phone {
+  margin-top: 25px; }
+
+section .main .message {
+  margin-top: 10px; }
+
+section .main .phone > span, section .main .photo > span, section .main .message > span {
+  font-size: 22px;
+  color: #999;
+  font-weight: 600;
+  margin-left: 12px; }
+
+section .main input {
+  margin-left: 10px;
+  position: relative;
+  top: -5px;
+  font-size: 13px; }
+
+section .main .phone > input, section .main .message > input {
+  height: 36px;
+  width: 210px; }
+
+section .main .photo > input {
+  height: 36px;
+  width: 140px; }
+
+section .main .photo > #code {
+  display: inline-block;
+  height: 36px;
+  width: 82px;
+  position: relative;
+  top: -2px;
+  border-left: 2px solid #ccc;
+  text-align: center;
+  background-color: #eee;
+  cursor: pointer; }
+
+section .main .message > i {
+  display: inline-block;
+  height: 36px;
+  width: 82px;
+  position: relative;
+  top: -3px;
+  border-left: 2px solid #ccc;
+  background: #f0f0f0;
+  text-align: center;
+  font-size: 11px;
+  color: #ff0000; }
+
+section .main .check {
+  margin-top: 20px;
+  margin-left: 40px;
+  height: 14px;
+  font-size: 12px;
+  color: #666; }
+
+section .main .check > i {
+  position: relative;
+  top: -7px; }
+
+section .main .submit {
+  margin-left: 40px;
+  margin-top: 14px;
+  color: #fff;
+  background: #ccc;
+  width: 280px;
+  height: 40px;
+  display: block; }
+
+section .main #total {
+  display: block;
+  margin-left: 40px;
+  font-size: 11px;
+  color: #ff0000; }
+
+section .main .enter {
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 4px;
+  font-size: 12px; }
+
+section .main .tirdEnter {
+  font-size: 12px;
+  color: #ff0000;
+  margin-left: 75px; }

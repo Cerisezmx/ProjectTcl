@@ -1,0 +1,254 @@
+@import "base";
+.cartitle{
+	width:100%;
+	height:70px;
+	background:url(../images/logo.jpg) no-repeat center left;
+	line-height:70px;
+	p{
+		font-size:16px;
+		color:#666;
+		margin-left:85px;
+	}
+}
+//购物车信息头
+$_width:1240px;
+.cartfom{
+	width:100%;
+	height:80px;
+	background:#e3e3e3;
+	.cartCon{
+		width:$_width;
+		height:80px;
+		text-align:center;
+		line-height:80px;
+		margin:0 auto;
+		.titlecart{
+			float: left;
+		    font-size: 14px;
+		    font-weight: 700;
+		    color: #333;
+		    text-align: center;
+			    .checkAll{
+			    	display:inline-block;
+			    	width:20px;
+			    	height:20px;
+			    	line-height:20px;
+			    	border:1px solid #ccc;
+			    	background:#fff;
+					position:relative;
+					top:5px;
+					margin-right:23px;
+					cursor:pointer;			    	
+				}
+		}
+		.form_total{
+		    float: left;
+		    font-size: 14px;
+		    font-weight: 700;
+		    color: #333;
+		    text-align: center;
+		}
+		.pro-wid{
+			width:610px;
+		}
+		.pri-wid{
+			width:100px;
+		}
+		.num-wid{
+			width:176px;
+		}
+		.sub-wid{
+			width:140px;
+		} 
+		.ope-wid{
+			width:70px;
+		} 
+	}
+} 
+//商品块
+.commodity{
+	width:100%;
+	.cartlist{
+		width:$_width;
+		margin:0 auto;
+		margin-bottom:160px;
+		.cart-good{
+			width:$_width;
+			height:215px;
+			border-bottom:1px solid #ccc;
+			dl{ 
+				height:120px;
+				width:$_width;
+				margin-top:70px;
+				dd{
+					display:inline-block;
+					height:120px;
+					line-height:120px;
+					float:left;
+				}
+				.good1{
+					width:130px;
+					position:relative;
+					span{
+						display:inline-block;
+				    	width:20px;
+				    	height:20px;
+				    	line-height:20px;
+				    	text-align:center;
+				    	border:1px solid #ccc;
+				    	background:#fff;
+						position:absolute;
+						top:60px;
+						left:10px;
+						cursor: pointer;
+					}
+				}
+				.good2{
+					width:580px;
+					img{
+						width:120px;
+						height:120px;
+					}
+					p{
+						color:#666;
+						font-size:15px;
+						margin-left:53px;
+						display:inline-block;
+					}
+				}
+				.good3{
+					width:100px;
+					color:#3e3e3e;
+				}
+				.good4{
+					width:176px;
+					line-height:120px;
+					text-align:center;
+					span{
+						background-color: #e3e3e3;
+    					cursor: pointer;
+    					display:inline-block;
+    					width:32px;
+    					height:32px;
+    					line-height:32px;
+					}
+					input{
+						width:23px;
+						height:32px;
+						display:inline-block;
+						padding-left:8px;
+						color:#ff0000;
+					}
+					
+				}
+				.good5{
+					width:140px;
+					text-align:center;
+					.now{
+						font-size:14px;
+						margin-top:50px;
+						margin-right:10px;
+						color:#ff0000;
+						line-height:24px;
+					}
+				}
+				.good6{
+					width:70px;
+					color:#333;
+					span{
+						display:inline-block;
+						width:20px;
+						height:20px;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+}
+}
+		// 结算模块
+		.account{
+			height:120px;
+			width:$_width;
+			border-bottom:1px solid #ccc;
+			line-height:120px;
+		}
+		.goon{
+		font-size:14px;
+		color:#333;
+		font-weight:600;
+		line-height:28px;
+		display:inline-block;
+		float:left;
+		margin-top:44px;
+			&:hover{
+				color:#ff0000;
+			}
+		}
+		.choose{
+			display:inline-block;
+			font-size:12px;
+			line-height:24px;
+			margin-left:240px;
+			float:left;
+			margin-top:44px;
+		}
+		.choose .goodsCount, .choose .chooseCount{
+			font-size:14px;
+			color:#ff0000;
+			margin-left:10px;
+			margin-right:10px;
+			font-weight:700;
+		}
+		.choose .rmbtotal{
+			margin-left:40px;
+		}
+		.choose .rmbtotal .rmbt{
+			font-size:22px;
+			color:#ff0000;
+			font-weight:600;
+			margin-left:30px;
+		}
+		.rightbuy{
+			display:inline-block;
+			width:230px;
+			height:50px;
+			line-height:50px;
+			text-align:center;
+			background:#ff0000;
+			color:#fff;
+			float:right;
+			margin-top:36px;
+			font-size:16px;
+		}
+//购物车没有商品时
+.nogoods{
+	width:$_width;
+	height:465px;
+	text-align:center;
+	overflow:hidden;
+	background:url('../images/shopcar/shopping.png') 300px center no-repeat pink;;
+	p{	
+		font-size:20px;
+		font-weight:bolder;
+		margin-top:180px;
+	}
+	a{
+		display:inline-block;
+		width:135px;
+		height:36px;
+		line-height:36px;
+		border:1px solid #ff0000;
+		font-size:14px;
+		font-weight:600;
+		color:#ff0000;
+		border-radius: 5px;
+		margin-top:30px;
+		&:hover{
+			background:#ff0000;
+			color:#fff;
+		}
+	}
+}
+
+

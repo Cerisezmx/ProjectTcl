@@ -1,0 +1,115 @@
+@import "base";
+$margin_left:40px;
+section .main{
+	border:1px solid #ccc;
+}
+section .main>.rep{
+	margin-top:30px;
+	color:#33336c;
+	margin-left:$margin_left;
+	font-size:18px;
+}
+section .main .verify{
+	height:20px;
+	width:300px;
+	margin-left:50px;
+	color:#ff0000;
+	font-size:11px;
+	margin-top:4px;
+}
+section .main .phone,section .main .photo,section .main .message{
+	height:40px;
+	width:280px;
+	border:2px solid #ccc;
+	margin-left:$margin_left;
+	margin-top:5px;
+	line-height:40px;
+	
+}
+section .main .phone{
+	margin-top:25px;
+}
+section .main .message{
+	margin-top:10px;
+}
+section .main .phone>span,section .main .photo>span,section .main .message>span{
+	font-size:22px;
+	color:#999;
+	font-weight:600;
+	margin-left:12px;
+}
+section .main input{
+	margin-left:10px;
+	position: relative;
+    top: -5px;
+    font-size:13px;
+}
+section .main .phone>input,section .main .message>input{
+	height:36px;
+	width:210px;
+}
+section .main .photo>input{
+	height:36px;
+	width:140px;
+}
+
+section .main .photo> #code{
+	display:inline-block;
+	height:36px;
+	width:82px;
+	position:relative;
+	top:-2px;
+	border-left:2px solid #ccc;
+	text-align:center;
+	background-color:#eee;
+	cursor:pointer;
+}
+section .main .message>i{
+	display:inline-block;
+	height:36px;
+	width:82px;
+	position:relative;
+	top:-3px;
+	border-left:2px solid #ccc;
+	background:#f0f0f0;
+	text-align:center;
+	font-size:11px;
+	color:#ff0000;
+}
+section .main .check{
+	margin-top:20px;
+	margin-left:$margin_left;
+	height:14px;
+	font-size:12px;
+	color:#666;
+}
+section .main .check>i{
+	position:relative;
+	top:-7px;
+}
+section .main .submit{
+	margin-left:$margin_left;
+	margin-top:14px;
+	color:#fff;
+	background:#ccc;
+	width:280px;
+	height:40px;
+	display:block;
+}
+section .main #total{
+	display:block;
+	margin-left:$margin_left;
+	font-size:11px;
+	color:#ff0000;
+}
+section .main .enter{
+	display:inline-block;
+	margin-left:$margin_left;
+	margin-top:4px;
+	font-size:12px;
+}
+section .main .tirdEnter{
+	font-size:12px;
+	color:#ff0000;
+	margin-left:75px;
+}

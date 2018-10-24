@@ -1,0 +1,99 @@
+@import "base";
+$margin_left:40px;
+section .main{
+	border:1px solid #ccc;
+}
+section .main>.rep{
+	margin-top:20px;
+	color:#333;
+	margin-left:$margin_left;
+	font-size:18px;
+}
+section .main>#title{
+	width:280px;
+	height:60px;
+	line-height:60px;
+	border-bottom:2px solid #979797;
+}
+section .main>#title .wechat{
+	display:inline-block;
+	margin-left:30px;
+}
+section .main .phone{
+	height:40px;
+	width:280px;
+	border:2px solid #ccc;
+	margin-left:$margin_left;
+	line-height:40px;
+
+}
+section .main .phone2{
+	margin-top:15px;
+}
+section .main .phone>span{
+	font-size:22px;
+	color:#999;
+	font-weight:600;
+	margin-left:12px;
+}
+
+section .main input{
+	margin-left:10px;
+	position: relative;
+    top: -5px;
+    font-size:13px;
+}
+section .main .phone>input{
+	height:36px;
+	width:210px;
+}
+section .main .check{
+	margin-top:30px;
+	margin-left:$margin_left;
+	height:14px;
+	font-size:12px;
+	color:#666;
+}
+section .main .check>i{
+	position:relative;
+	top:-7px;
+}
+section .main #loginsubmit{
+	margin-left:$margin_left;
+	margin-top:14px;
+	color:#fff;
+	background:#ccc;
+	width:280px;
+	height:40px;
+	display:block;
+}
+section .main .submit{
+	margin-left:$margin_left;
+	margin-top:14px;
+	color:#fff;
+	background:#ff0000;
+	width:280px;
+	height:40px;
+	display:block;
+}
+section .main .enter{
+	display:inline-block;
+	margin-left:$margin_left;
+	margin-top:14px;
+	font-size:12px;
+}
+section .main .tirdEnter{
+	font-size:12px;
+	color:#666;
+	margin-left:40px;
+}
+section .main .verify{
+	color:#ff0000;
+	font-size:11px;
+}
+section .main .hei{
+	height:25px;
+	width:280px;
+	line-height:16px;
+	margin-left:40px;
+}
